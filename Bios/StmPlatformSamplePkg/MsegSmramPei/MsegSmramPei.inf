@@ -31,7 +31,7 @@
 
 [Packages]
   MdePkg/MdePkg.dec
-  IntelFrameworkPkg/IntelFrameworkPkg.dec
+  StandaloneMmPkg/StandaloneMmPkg.dec
   StmCpuPkg/StmCpuPkg.dec
 
 [LibraryClasses]
@@ -41,12 +41,13 @@
   HobLib
   PeiServicesLib
   BaseMemoryLib
+  BaseLib
   
 [Pcd]
   gStmCpuPkgTokenSpaceGuid.PcdCpuMsegSize      ## CONSUMES
 
 [Guids]
-  gEfiSmmPeiSmramMemoryReserveGuid             ## CONSUMES ## HOB
+  gEfiMmPeiMmramMemoryReserveGuid             ## CONSUMES ## HOB
   gMsegSmramGuid                               ## PRODUCES ## HOB
 
 [Depex]
